@@ -1,0 +1,120 @@
+@import 'fonts';
+@import 'variables';
+@import 'navigation';
+@import 'sidebar';
+@import 'chart';
+@import 'grid';
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+.sidebar-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    line-height: $navigation-item-height;
+    padding-left: $navigation-item-padding;
+
+    &.active {
+      border-left: $navigation-active-border-width solid $navigation-active-border-color;
+      padding-left: $navigation-item-padding - $navigation-active-border-width;
+      background: $navigation-active-background;
+    }
+
+    &:hover {
+      background: $navigation-active-background;
+    }
+
+    a {
+      color: $inverted-text-color;
+      font-size: $navigation-font-size;
+    }
+  }
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: $content-background-color;
+  color: $text-color;
+  font-family: $font;
+}
+
+main {
+  box-shadow: $main-shadow;
+  min-height: 100%;
+}
+
+.content {
+  padding: 0 $content-padding $content-padding $content-padding;
+}
+
+header {
+  height: $header-height;
+  line-height: $header-height;
+
+  .sidebar-toggler {
+    color: $text-color;
+    float:left;
+    text-align: center;
+    width: $content-padding;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  h1 {
+    font-size: $header-font-size;
+    font-weight: normal;
+    line-height: inherit;
+    margin: 0;
+  }
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+@for $ci from 1 through 12 {
+  .col-sm-#{$ci} {
+    padding: $container-margin;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sidebar-toggler {
+    width: $content-padding-sm;
+  }
+
+  .content {
+    padding: 0 $content-padding-sm $content-padding-sm $content-padding-sm;
+  }
+
+  @for $ci from 1 through 12 {
+    .col-sm-#{$ci} {
+      padding: $container-margin-sm;
+    }
+  }
+}
+
+.rz-container {
+  background: $container-background-color;
+  border-radius: $container-border-radius;
+  padding: $container-padding;
+  box-shadow: $container-shadow;
+
+  .rz-title, .rz-subtitle {
+    font-weight: normal;
+    display: inline-block;
+  }
+
+  .rz-subtitle {
+    padding: $container-subtitle-padding;
+    font-size: $container-subtitle-font-size;
+  }
+}
+

@@ -1,0 +1,12 @@
+{
+  "dataSources": [
+    "OData"
+  ],
+  "logo": "assets/img/logo.png",
+  "name": "Radzen Demo",
+  "pages": [
+    "Home"
+  ],
+  "target": "angular2",
+  "theme": "Dawn"
+}

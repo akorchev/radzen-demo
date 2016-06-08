@@ -1,0 +1,18 @@
+
+    <aside class="sidebar">
+      <div class="logo" id="logo"><img src="assets/img/logo.png"></div>
+      <nav id="navigation"><ul class="sidebar-menu">
+  <li [class.active]="router.isRouteActive(router.generate(['/Home']))"><a [routerLink]="['/Home']">Home</a></li>
+
+</ul>
+</nav>
+    </aside>
+    <main>
+      <header>
+        <a class="sidebar-toggler">☰</a>
+        <h1 id="title">Radzen Demo</h1>
+      </header>
+      <div class="content"><router-outlet></router-outlet></div>
+    </main>
+  
+
