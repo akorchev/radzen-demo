@@ -9,8 +9,6 @@ import { ODataModel } from '../models/odata';
 
 @Injectable()
 export class ODataService {
-  data$: Observable<any>;
-
   get url() {
     var url = sessionStorage['OData'];
 
@@ -50,8 +48,6 @@ export class ODataService {
   };
 
   constructor(private http: Http, private store: Store<State>) {
-    this.data$ = store.select('odata');
-
     const headers = new Headers();
 
     headers.append('Accept', 'application/json');
@@ -64,6 +60,7 @@ export class ODataService {
         return response.json()
       })
       .subscribe(data => {
+        console.log('dispatch')
         store.dispatch( {
           type: ODATA_READ,
           payload: data.value

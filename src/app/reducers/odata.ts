@@ -1,10 +1,10 @@
-import { ActionReducer, Action } from '@ngrx/store';
+import { combineReducers, ActionReducer, Action } from '@ngrx/store';
 
 import { ODataModel } from '../models/odata';
 
 export const ODATA_READ = 'ODATA_READ';
 
-export const odata: ActionReducer<ODataModel[]> = (state: ODataModel[] = [], action: Action) => {
+const items: ActionReducer<ODataModel[]> = (state: ODataModel[] = [], action: Action) => {
   switch (action.type) {
     case ODATA_READ:
       return action.payload;
@@ -16,7 +16,7 @@ export const odata: ActionReducer<ODataModel[]> = (state: ODataModel[] = [], act
 
 export const ODATA_SELECT = 'ODATA_SELECT';
 
-export const odataSelection: ActionReducer<ODataModel> = (state: ODataModel = null, action: Action) => {
+const selection: ActionReducer<ODataModel> = (state: ODataModel = null, action: Action) => {
   switch (action.type) {
     case ODATA_SELECT:
       return action.payload;
@@ -24,3 +24,5 @@ export const odataSelection: ActionReducer<ODataModel> = (state: ODataModel = nu
       return state;
   }
 }
+
+export const odata = combineReducers({ items, selection })

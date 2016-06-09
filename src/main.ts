@@ -5,7 +5,7 @@ import {ROUTER_PROVIDERS} from '@angular/router-deprecated';
 import {HTTP_PROVIDERS} from '@angular/http';
 import { provideStore } from '@ngrx/store';
 
-import { odata, odataSelection } from './app/reducers/odata';
+import { odata } from './app/reducers/odata';
 
 import './assets/css/styles.css';
 
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function main() {
     ...FORM_PROVIDERS,
     ...HTTP_PROVIDERS,
     ...ROUTER_PROVIDERS,
-    provideStore({ odata, odataSelection }),
+    provideStore({ odata }),
     provide(LocationStrategy, { useClass: HashLocationStrategy })
   ])
   .then(() => {

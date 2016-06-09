@@ -9,7 +9,7 @@ import {Store} from '@ngrx/store';
 
 import { ODataService } from '../../services/o-data';
 import { ODATA_SELECT } from '../../reducers/odata';
-import { State } from '../../state.ts';
+import { ODataState, State } from '../../state';
 
 export const DIRECTIVES = [
   Grid, Container, Form
@@ -64,10 +64,15 @@ export class HomeMeta {
       ]
     };
 
-  oDataItems: Observable<any>;
-  oDataSelection: Observable<any>;
   oDataSchema: any;
+
   store: Store<State>;
+
+  odata: {
+    items: Observable<ODataModel[]>,
+    selection: Observable<ODataModel>
+  };
+
   odataService: ODataService;
 
   constructor(injector: Injector) {
@@ -75,11 +80,14 @@ export class HomeMeta {
 
     this.store = injector.get(Store);
 
-    this.oDataItems = this.odataService.data$;
+    const odataState: Observable<ODataState> = this.store.select(state => state.odata);
+
+    this.odata = {
+      items: odataState.map(state => state.items),
+      selection: odataState.map(state => state.selection)
+    };
 
     this.oDataSchema = this.odataService.schema;
-
-    this.oDataSelection = this.store.select('odataSelection');
   }
 
   odataSelect(payload) {

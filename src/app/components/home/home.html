@@ -2,8 +2,8 @@
     <div class="col-sm-12">
       <rz-container [title]="grid0.title" [subtitle]="grid0.subtitle">
         <rz-grid
-         [data]="oDataItems | async"
-         [selection]="oDataSelection | async"
+         [data]="odata.items | async"
+         [selection]="odata.selection | async"
          (select)="odataSelect($event)"
          [columns]='grid0.columns'>
         </rz-grid>
@@ -15,7 +15,7 @@
       <rz-form
          style="display:block; height: 100%"
          [designMode]="false"
-         [data]="oDataSelection | async"
+         [data]="odata.selection | async"
          (save)="odataSave($event)"
          [fields]="form0.fields"
          [schema]="oDataSchema">
