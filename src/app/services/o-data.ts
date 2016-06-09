@@ -4,11 +4,16 @@ import 'rxjs/Rx';
 import {Observable, BehaviorSubject} from 'rxjs'
 import 'rxjs/add/operator/share';
 import 'rxjs/operator/startWith';
+import { Store } from '@ngrx/store';
+
+import { State } from '../state';
+import { ODATA_READ } from '../reducers/odata';
+import { ODataModel } from '../models/odata';
 
 @Injectable()
 export class ODataService {
   subject$: BehaviorSubject<any[]>;
-  data$: Observable<any[]>;
+  data$: Observable<any>;
   selection$: BehaviorSubject<any>;
   private data: any[];
 
@@ -50,15 +55,12 @@ export class ODataService {
     Price: {}
   };
 
-  constructor(private http: Http) {
-    this.data = [];
+  constructor(private http: Http, private store: Store<State>) {
+    this.data$ = store.select('odata');
 
     this.subject$ = new BehaviorSubject(this.data)
 
     this.selection$ = new BehaviorSubject(null)
-
-    this.data$ = new Observable<any[]>(observer => this.subject$.subscribe(observer))
-                      .share();
 
     const headers = new Headers();
 
@@ -69,13 +71,13 @@ export class ODataService {
         if (response.url) {
           this.url = response.url;
         }
-
         return response.json()
       })
       .subscribe(data => {
-        this.data = data.value;
-        this.subject$.next(this.data);
-        this.selection = this.data[0];
+        store.dispatch( {
+          type: ODATA_READ,
+          payload: data.value
+        })
       });
   }
 

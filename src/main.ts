@@ -3,6 +3,9 @@ import {bootstrap} from '@angular/platform-browser-dynamic';
 import {FORM_PROVIDERS, LocationStrategy, HashLocationStrategy} from '@angular/common';
 import {ROUTER_PROVIDERS} from '@angular/router-deprecated';
 import {HTTP_PROVIDERS} from '@angular/http';
+import { provideStore } from '@ngrx/store';
+
+import { odata } from './app/reducers/odata';
 
 import './assets/css/styles.css';
 
@@ -20,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function main() {
     ...FORM_PROVIDERS,
     ...HTTP_PROVIDERS,
     ...ROUTER_PROVIDERS,
+    provideStore({ odata }),
     provide(LocationStrategy, { useClass: HashLocationStrategy })
   ])
   .then(() => {
