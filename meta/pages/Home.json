@@ -1,70 +1,50 @@
 {
   "name": "Home",
-  "sections": {
-    "content": {
-      "components": [
+  "components": [
+    {
+      "row": 0,
+      "col": 12,
+      "type": "grid",
+      "columns": [],
+      "section": "content",
+      "dataSource": "OData"
+    },
+    {
+      "row": 1,
+      "col": 12,
+      "section": "content",
+      "dataSource": "OData",
+      "fields": [
         {
-          "components": [
-            {
-              "columns": 12,
-              "components": [
-                {
-                  "columns": [],
-                  "dataSource": "OData",
-                  "type": "grid"
-                }
-              ],
-              "type": "cell"
-            }
-          ],
-          "type": "row"
+          "property": "Description",
+          "title": "Description"
         },
         {
-          "components": [
-            {
-              "columns": 12,
-              "components": [
-                {
-                  "dataSource": "OData",
-                  "fields": [
-                    {
-                      "property": "Description",
-                      "title": "Description"
-                    },
-                    {
-                      "property": "DiscontinuedDate",
-                      "title": "DiscontinuedDate"
-                    },
-                    {
-                      "property": "ID",
-                      "title": "ID"
-                    },
-                    {
-                      "property": "Name",
-                      "title": "Name"
-                    },
-                    {
-                      "property": "Price",
-                      "title": "Price"
-                    },
-                    {
-                      "property": "Rating",
-                      "title": "Rating"
-                    },
-                    {
-                      "property": "ReleaseDate",
-                      "title": "ReleaseDate"
-                    }
-                  ],
-                  "type": "form"
-                }
-              ],
-              "type": "cell"
-            }
-          ],
-          "type": "row"
+          "property": "DiscontinuedDate",
+          "title": "DiscontinuedDate"
+        },
+        {
+          "property": "ID",
+          "title": "ID"
+        },
+        {
+          "property": "Name",
+          "title": "Name"
+        },
+        {
+          "property": "Price",
+          "title": "Price"
+        },
+        {
+          "property": "Rating",
+          "title": "Rating"
+        },
+        {
+          "property": "ReleaseDate",
+          "title": "ReleaseDate"
         }
-      ]
+      ],
+      "type": "form"
     }
-  }
+  ]
 }

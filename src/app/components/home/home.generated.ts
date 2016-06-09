@@ -19,50 +19,10 @@ export const PROVIDERS = [
   ODataService
 ];
 
+const { components } = require('../../../../meta/pages/Home.json');
+
 export class HomeMeta {
-    cell0 = {
-      columns: 12
-    };
-    grid0 = {
-      columns: [],
-      dataSource: "OData"
-    };
-    cell1 = {
-      columns: 12
-    };
-    form0 = {
-      dataSource: "OData",
-      fields: [
-        {
-          property: "Description",
-          title: "Description"
-        },
-        {
-          property: "DiscontinuedDate",
-          title: "DiscontinuedDate"
-        },
-        {
-          property: "ID",
-          title: "ID"
-        },
-        {
-          property: "Name",
-          title: "Name"
-        },
-        {
-          property: "Price",
-          title: "Price"
-        },
-        {
-          property: "Rating",
-          title: "Rating"
-        },
-        {
-          property: "ReleaseDate",
-          title: "ReleaseDate"
-        }
-      ]
-    };
+  components = components;
 
   oDataSchema: any;
 
