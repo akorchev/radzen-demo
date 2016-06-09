@@ -4,13 +4,12 @@ import { Observable } from 'rxjs'
 import { Store } from '@ngrx/store';
 
 import { State } from '../state';
-import { ODATA_READ, ODATA_SELECT } from '../reducers/odata';
+import { ODATA_READ } from '../reducers/odata';
 import { ODataModel } from '../models/odata';
 
 @Injectable()
 export class ODataService {
   data$: Observable<any>;
-  selection$: Observable<any>;
 
   get url() {
     var url = sessionStorage['OData'];
@@ -52,7 +51,6 @@ export class ODataService {
 
   constructor(private http: Http, private store: Store<State>) {
     this.data$ = store.select('odata');
-    this.selection$ = store.select('odataSelection');
 
     const headers = new Headers();
 
@@ -71,21 +69,6 @@ export class ODataService {
           payload: data.value
         })
       });
-  }
-
-  public getList() {
-    return this.data$;
-  }
-
- public get selection() {
-    return this.selection$;
-  }
-
-  public set selection(payload) {
-    this.store.dispatch({
-      type: ODATA_SELECT,
-      payload
-    })
   }
 
   update(item: any) {

@@ -4,7 +4,13 @@ import {Injector} from '@angular/core';
 import {Container} from '@radzen/angular';
 import {Injector} from '@angular/core';
 import {Form} from '@radzen/angular';
-import {ODataService} from '../../services/o-data';
+import {Observable} from 'rxjs';
+import {Store} from '@ngrx/store';
+
+import { ODataService } from '../../services/o-data';
+import { ODATA_SELECT } from '../../reducers/odata';
+import { State } from '../../state.ts';
+
 
 export const DIRECTIVES = [
   Grid, Container, Form
@@ -59,9 +65,29 @@ export class HomeMeta {
       ]
     };
 
-  oData: ODataService;
+  oDataItems: Observable<any>;
+  oDataSelection: Observable<any>;
+  oDataSchema: any;
+  store: Store<State>;
 
   constructor(injector: Injector) {
-    this.oData = injector.get(ODataService);
+    const odataService: ODataService = injector.get(ODataService);
+
+    const store: Store<State> = injector.get(Store);
+
+    this.store = store;
+
+    this.oDataItems = odataService.data$;
+
+    this.oDataSchema = odataService.schema;
+
+    this.oDataSelection = this.store.select('odataSelection');
+  }
+
+  odataSelect(payload) {
+    this.store.dispatch({
+      type: ODATA_SELECT,
+      payload
+    });
   }
 }

@@ -1,28 +1,24 @@
 <section class="container-fluid" id="content"><div class="row">
-    <div class="col-sm-12"
->
-    <rz-container [title]="grid0.title" [subtitle]="grid0.subtitle">
-  <rz-grid
-    [data]="oData.getList() | async"
-    [selection]="oData.selection | async"
-    (select)="oData.selection = $event"
-    [columns]='grid0.columns'>
-  </rz-grid>
-</rz-container>
-</div>
-</div>
-
-<div class="row">
-    <div class="col-sm-12"
->
-    <rz-form
-  style="display:block; height: 100%"
-  [designMode]="false"
-  [selection]="oData.selection | async"
-  [service]="oData"
-  [fields]="form0.fields"
-  [schema]="oData.schema">
-</rz-form>
-</div>
-</div>
+    <div class="col-sm-12">
+      <rz-container [title]="grid0.title" [subtitle]="grid0.subtitle">
+        <rz-grid
+         [data]="oDataItems | async"
+         [selection]="oDataSelection | async"
+         (select)="odataSelect($event)"
+         [columns]='grid0.columns'>
+        </rz-grid>
+      </rz-container>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <rz-form
+         style="display:block; height: 100%"
+         [designMode]="false"
+         [selection]="oDataSelection | async"
+         [fields]="form0.fields"
+         [schema]="oDataSchema">
+      </rz-form>
+    </div>
+  </div>
 </section>
