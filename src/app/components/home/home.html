@@ -15,7 +15,8 @@
       <rz-form
          style="display:block; height: 100%"
          [designMode]="false"
-         [selection]="oDataSelection | async"
+         [data]="oDataSelection | async"
+         (save)="odataSave($event)"
          [fields]="form0.fields"
          [schema]="oDataSchema">
       </rz-form>

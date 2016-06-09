@@ -11,7 +11,6 @@ import { ODataService } from '../../services/o-data';
 import { ODATA_SELECT } from '../../reducers/odata';
 import { State } from '../../state.ts';
 
-
 export const DIRECTIVES = [
   Grid, Container, Form
 ];
@@ -69,17 +68,16 @@ export class HomeMeta {
   oDataSelection: Observable<any>;
   oDataSchema: any;
   store: Store<State>;
+  odataService: ODataService;
 
   constructor(injector: Injector) {
-    const odataService: ODataService = injector.get(ODataService);
+    this.odataService = injector.get(ODataService);
 
-    const store: Store<State> = injector.get(Store);
+    this.store = injector.get(Store);
 
-    this.store = store;
+    this.oDataItems = this.odataService.data$;
 
-    this.oDataItems = odataService.data$;
-
-    this.oDataSchema = odataService.schema;
+    this.oDataSchema = this.odataService.schema;
 
     this.oDataSelection = this.store.select('odataSelection');
   }
@@ -89,5 +87,9 @@ export class HomeMeta {
       type: ODATA_SELECT,
       payload
     });
+  }
+
+  odataSave(payload) {
+    this.odataService.update(payload);
   }
 }
