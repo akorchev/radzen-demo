@@ -15,22 +15,12 @@ export const PROVIDERS = [
 ];
 
 export class HomeMeta {
-    cell0 = {
-      columns: 12
-    };
     grid0 = {
-      columns: [],
-      dataSource: "OData"
-    };
-    cell1 = {
-      columns: 12
-    };
-    form0 = {
-      dataSource: "OData",
-      fields: [
+      col: 6,
+      columns: [
         {
           property: "Description",
-          title: "Description"
+          title: "Description2"
         },
         {
           property: "DiscontinuedDate",
@@ -56,7 +46,18 @@ export class HomeMeta {
           property: "ReleaseDate",
           title: "ReleaseDate"
         }
-      ]
+      ],
+      dataSource: "OData",
+      height: 1137,
+      row: 0,
+      section: "content"
+    };
+    form0 = {
+      col: 6,
+      dataSource: "OData",
+      fields: [],
+      row: 0,
+      section: "content"
     };
 
   oData: ODataService;
