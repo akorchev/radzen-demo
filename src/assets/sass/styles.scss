@@ -101,7 +101,15 @@ header {
   }
 }
 
+rz-container,
+rz-chart,
+rz-pie {
+  display: block;
+  height: 100%;
+}
+
 .rz-container {
+  height: 100%;
   background: $container-background-color;
   border-radius: $container-border-radius;
   padding: $container-padding;

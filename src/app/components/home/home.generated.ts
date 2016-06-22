@@ -2,10 +2,20 @@ import {Injector} from '@angular/core';
 import {Grid} from '@radzen/angular';
 import {Injector} from '@angular/core';
 import {Container} from '@radzen/angular';
+import {Injector} from '@angular/core';
+import {Form} from '@radzen/angular';
+import {Injector} from '@angular/core';
+import {Pie} from '@radzen/angular';
+import {Injector} from '@angular/core';
+import {Container} from '@radzen/angular';
+import {Injector} from '@angular/core';
+import {Chart} from '@radzen/angular';
+import {Injector} from '@angular/core';
+import {Container} from '@radzen/angular';
 import {ODataService} from '../../services/o-data';
 
 export const DIRECTIVES = [
-  Grid, Container
+  Grid, Container, Form, Pie, Container, Chart, Container
 ];
 
 export const PROVIDERS = [

@@ -1,12 +1,120 @@
 {
   "components": [
     {
-      "col": 12,
-      "columns": [],
+      "col": 6,
+      "columns": [
+        {
+          "property": "Description",
+          "title": "Description"
+        },
+        {
+          "property": "DiscontinuedDate",
+          "title": "DiscontinuedDate"
+        },
+        {
+          "property": "ID",
+          "title": "ID"
+        },
+        {
+          "property": "Name",
+          "title": "Name"
+        },
+        {
+          "property": "Price",
+          "title": "Price"
+        },
+        {
+          "property": "Rating",
+          "title": "Rating"
+        },
+        {
+          "property": "ReleaseDate",
+          "title": "ReleaseDate"
+        }
+      ],
       "dataSource": "OData",
+      "height": 724,
       "row": 0,
       "section": "content",
+      "subtitle": "list",
+      "title": "Product",
       "type": "grid"
+    },
+    {
+      "col": 6,
+      "dataSource": "OData",
+      "fields": [
+        {
+          "property": "Description",
+          "title": "Description"
+        },
+        {
+          "property": "DiscontinuedDate",
+          "title": "DiscontinuedDate"
+        },
+        {
+          "property": "ID",
+          "title": "ID"
+        },
+        {
+          "property": "Name",
+          "title": "Name"
+        },
+        {
+          "property": "Rating",
+          "title": "Rating"
+        },
+        {
+          "property": "ReleaseDate",
+          "title": "ReleaseDate"
+        }
+      ],
+      "height": 725,
+      "row": 0,
+      "section": "content",
+      "subtitle": "details",
+      "title": "Product",
+      "type": "form"
+    },
+    {
+      "category": "Name",
+      "chartType": "Pie",
+      "col": 12,
+      "dataSource": "OData",
+      "height": 297,
+      "labels": {
+        "connectors": true,
+        "offset": 20
+      },
+      "legend": true,
+      "radius": 0.8,
+      "row": 1,
+      "section": "content",
+      "title": "Product rating",
+      "type": "pie",
+      "value": "Rating"
+    },
+    {
+      "aggregate": "Sum",
+      "category": "Name",
+      "categoryAxis": {
+        "format": ""
+      },
+      "chartType": "Column",
+      "col": 12,
+      "dataSource": "OData",
+      "height": 274,
+      "legend": true,
+      "limit": {},
+      "row": 2,
+      "section": "content",
+      "subtitle": "price",
+      "title": "Product",
+      "type": "chart",
+      "value": "Price",
+      "valueAxis": {
+        "format": "$s"
+      }
     }
   ],
   "name": "Home"

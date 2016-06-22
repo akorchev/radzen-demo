@@ -5243,7 +5243,14 @@ header {
   .col-sm-12 {
     padding: 9px; } }
 
+rz-container,
+rz-chart,
+rz-pie {
+  display: block;
+  height: 100%; }
+
 .rz-container {
+  height: 100%;
   background: #fff;
   border-radius: 3px;
   padding: 18px;
