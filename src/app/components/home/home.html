@@ -6,7 +6,7 @@
         [subtitle]="components[0].subtitle"
         [data]="oData.items | async"
         [selection]="oData.selection | async"
-        (select)="onRowSelect($event)"
+        (select)="oDataSelect($event, components[0].select.argument)"
         [columns]='components[0].columns'>
       </rz-grid>
     </div>

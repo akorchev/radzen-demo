@@ -6,8 +6,8 @@
   "logo": "assets/img/logo.png",
   "name": "Radzen Demo",
   "navigation": [
-    "Home",
-    "Two"
+    "Two",
+    "Home"
   ],
   "pages": [
     "Home",

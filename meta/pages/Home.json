@@ -34,7 +34,7 @@
       "section": "content",
       "select": {
         "action": "Navigate",
-        "argument": "ProductDetails"
+        "argument": "product-details"
       },
       "subtitle": "list",
       "title": "Product",

@@ -1,6 +1,6 @@
 import { combineReducers, ActionReducer, Action } from '@ngrx/store';
 
-import { ODataModel } from '../models/odata';
+import { ODataModel } from '../models/o-data';
 
 export const ODATA_READ = 'ODATA_READ';
 

@@ -12,7 +12,7 @@ import './assets/css/styles.css';
  * App Component
  * our top level component that holds all of our components
  */
-import {AppComponent} from './app/components/app/app';
+import {AppComponent, appRouterProviders} from './app/components/app/app';
 /*
  * Bootstrap our Angular app with a top level component `App` and inject
  * our Services and Providers into Angular's dependency injection
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function main() {
   bootstrap(AppComponent, [
     ...FORM_PROVIDERS,
     ...HTTP_PROVIDERS,
-    ...ROUTER_PROVIDERS,
+    appRouterProviders,
     provideStore({
       oData,
     }),
