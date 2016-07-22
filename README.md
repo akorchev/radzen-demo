@@ -21,4 +21,4 @@ To run the application follow these steps.
 
 ## Get in touch
 
-If you want to learn more about Radzen feel free to contact us at [info@radzen.com](info@radzen.com) or open an issue in this repository.
+If you want to learn more about Radzen feel free to contact us at [info@radzen.com](mailto:info@radzen.com) or open an issue in this repository.
