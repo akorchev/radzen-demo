@@ -12,10 +12,6 @@
           "title": "DiscontinuedDate"
         },
         {
-          "property": "ID",
-          "title": "ID"
-        },
-        {
           "property": "Name",
           "title": "Name"
         },
@@ -33,9 +29,13 @@
         }
       ],
       "dataSource": "OData",
-      "height": 724,
+      "height": 725,
       "row": 0,
       "section": "content",
+      "select": {
+        "action": "Navigate",
+        "argument": "ProductDetails"
+      },
       "subtitle": "list",
       "title": "Product",
       "type": "grid"
@@ -69,7 +69,7 @@
           "title": "ReleaseDate"
         }
       ],
-      "height": 725,
+      "height": 586,
       "row": 0,
       "section": "content",
       "subtitle": "details",
@@ -117,5 +117,7 @@
       }
     }
   ],
-  "name": "Home"
+  "name": "Home",
+  "navigation": true,
+  "startPage": false
 }

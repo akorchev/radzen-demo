@@ -5,17 +5,11 @@
   "https": false,
   "logo": "assets/img/logo.png",
   "name": "Radzen Demo",
-  "navigation": [
-    "Home",
+  "pages": [
+    "Home3",
     "Two"
   ],
-  "pages": [
-    "Home",
-    "Two",
-    "Product Details"
-  ],
   "port": 8000,
-  "startPage": "Home",
   "target": "angular2",
   "theme": "Dusk"
 }

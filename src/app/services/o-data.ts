@@ -1,17 +1,12 @@
-import {Injectable} from '@angular/core';
-import {Http, Headers} from '@angular/http';
-import 'rxjs/Rx';
-import {Observable, BehaviorSubject} from 'rxjs'
-import 'rxjs/add/operator/share';
-import 'rxjs/operator/startWith';
+import { Injectable } from '@angular/core';
+import { Http, Headers } from '@angular/http';
+import { Store } from '@ngrx/store';
+
+import { State } from '../state';
+import { ODATA_READ } from '../reducers/o-data';
 
 @Injectable()
 export class ODataService {
-  subject$: BehaviorSubject<any[]>;
-  data$: Observable<any[]>;
-  selection$: BehaviorSubject<any>;
-  private data: any[];
-
   get url() {
     var url = sessionStorage['OData'];
 
@@ -50,16 +45,7 @@ export class ODataService {
     Price: {}
   };
 
-  constructor(private http: Http) {
-    this.data = [];
-
-    this.subject$ = new BehaviorSubject(this.data)
-
-    this.selection$ = new BehaviorSubject(null)
-
-    this.data$ = new Observable<any[]>(observer => this.subject$.subscribe(observer))
-                      .share();
-
+  constructor(private http: Http, store: Store<State>) {
     const headers = new Headers();
 
     headers.append('Accept', 'application/json');
@@ -73,22 +59,11 @@ export class ODataService {
         return response.json()
       })
       .subscribe(data => {
-        this.data = data.value;
-        this.subject$.next(this.data);
-        this.selection = this.data[0];
+        store.dispatch({
+          type: ODATA_READ,
+          payload: data.value
+        })
       });
-  }
-
-  public getList() {
-    return this.data$;
-  }
-
-  public get selection() {
-    return this.selection$;
-  }
-
-  public set selection(value) {
-    this.selection$.next(value);
   }
 
   update(item: any) {
@@ -104,7 +79,6 @@ export class ODataService {
         }
       })
       .subscribe(data => {
-        this.subject$.next(this.data.slice(0));
       });
   }
 }

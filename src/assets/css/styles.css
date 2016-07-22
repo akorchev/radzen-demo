@@ -18,22 +18,22 @@
     line-height: 3rem;
     padding-left: 20px; }
     .sidebar-menu li.active {
-      border-left: 4px solid #FEAA01;
+      border-left: 4px solid #2976C2;
       padding-left: 16px;
-      background: rgba(0, 0, 0, 0.07); }
+      background: #323442; }
     .sidebar-menu li:hover {
-      background: rgba(0, 0, 0, 0.07); }
+      background: #323442; }
     .sidebar-menu li a {
-      color: #fff; }
+      color: #344357; }
 
 .sidebar {
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
-  color: #fff;
+  color: #344357;
   width: 200px;
-  background: #1361A1;
+  background: #22232E;
   transition: transform .3s ease-in-out; }
 
 .logo {
@@ -75,12 +75,11 @@ main {
     stroke: none; }
 
 .rz-legend text, .rz-plot text {
-  fill: #344357;
+  fill: #fff;
   stroke: none; }
 
 .rz-grid path, .rz-grid line {
-  stroke: #344357;
-  stroke-opacity: 0.07; }
+  stroke: #2D2E3B; }
 
 .rz-slice {
   stroke: none; }
@@ -103,14 +102,14 @@ main {
 
 .rz-tooltip {
   font-size: 0.875rem;
-  color: #fff;
-  border-left: 1px solid #22232E; }
+  color: #344357;
+  border-left: 1px solid #fff; }
   .rz-tooltip dl {
     margin-bottom: 1rem;
     padding: 10px 10px;
     border-radius: 0 3px 3px 0;
     opacity: 0.9;
-    background: #22232E; }
+    background: #fff; }
   .rz-tooltip dt, .rz-tooltip dd {
     display: inline-block;
     vertical-align: middle;
@@ -136,7 +135,7 @@ main {
   stop-color: #2976C2; }
 
 .rz-radial-gradient-0 .rz-stop-1 {
-  stop-color: #1661AB; }
+  stop-color: #2976C2; }
 
 .rz-line-1 {
   stroke: #20A85B; }
@@ -157,7 +156,7 @@ main {
   stop-color: #20A85B; }
 
 .rz-radial-gradient-1 .rz-stop-1 {
-  stop-color: #0D8F45; }
+  stop-color: #20A85B; }
 
 .rz-line-2 {
   stroke: #FFB300; }
@@ -178,7 +177,7 @@ main {
   stop-color: #FFB300; }
 
 .rz-radial-gradient-2 .rz-stop-1 {
-  stop-color: #FB9428; }
+  stop-color: #FFB300; }
 
 .rz-line-3 {
   stroke: #FF4548; }
@@ -199,7 +198,7 @@ main {
   stop-color: #FF4548; }
 
 .rz-radial-gradient-3 .rz-stop-1 {
-  stop-color: #D12426; }
+  stop-color: #FF4548; }
 
 .rz-line-4 {
   stroke: #844CDA; }
@@ -220,7 +219,7 @@ main {
   stop-color: #844CDA; }
 
 .rz-radial-gradient-4 .rz-stop-1 {
-  stop-color: #6830BF; }
+  stop-color: #844CDA; }
 
 .rz-line-5 {
   stroke: #2C9AB7; }
@@ -241,7 +240,7 @@ main {
   stop-color: #2C9AB7; }
 
 .rz-radial-gradient-5 .rz-stop-1 {
-  stop-color: #1A84A1; }
+  stop-color: #2C9AB7; }
 
 .rz-line-6 {
   stroke: #A0E4CD; }
@@ -262,7 +261,7 @@ main {
   stop-color: #A0E4CD; }
 
 .rz-radial-gradient-6 .rz-stop-1 {
-  stop-color: #66C4A5; }
+  stop-color: #A0E4CD; }
 
 .rz-line-7 {
   stroke: #FFD66B; }
@@ -283,7 +282,7 @@ main {
   stop-color: #FFD66B; }
 
 .rz-radial-gradient-7 .rz-stop-1 {
-  stop-color: #E8B043; }
+  stop-color: #FFD66B; }
 
 .rz-line-8 {
   stroke: #F37F57; }
@@ -304,7 +303,7 @@ main {
   stop-color: #F37F57; }
 
 .rz-radial-gradient-8 .rz-stop-1 {
-  stop-color: #D65A2F; }
+  stop-color: #F37F57; }
 
 .rz-line-9 {
   stroke: #38545E; }
@@ -325,7 +324,7 @@ main {
   stop-color: #38545E; }
 
 .rz-radial-gradient-9 .rz-stop-1 {
-  stop-color: #243F4A; }
+  stop-color: #38545E; }
 
 .rz-line-10 {
   stroke: #9B4B6D; }
@@ -346,7 +345,7 @@ main {
   stop-color: #9B4B6D; }
 
 .rz-radial-gradient-10 .rz-stop-1 {
-  stop-color: #7D3050; }
+  stop-color: #9B4B6D; }
 
 .rz-line-11 {
   stroke: #FD6A92; }
@@ -367,7 +366,7 @@ main {
   stop-color: #FD6A92; }
 
 .rz-radial-gradient-11 .rz-stop-1 {
-  stop-color: #CC355F; }
+  stop-color: #FD6A92; }
 
 .rz-line-12 {
   stroke: #4A4069; }
@@ -388,7 +387,7 @@ main {
   stop-color: #4A4069; }
 
 .rz-radial-gradient-12 .rz-stop-1 {
-  stop-color: #382E57; }
+  stop-color: #4A4069; }
 
 .rz-line-13 {
   stroke: #293853; }
@@ -409,7 +408,7 @@ main {
   stop-color: #293853; }
 
 .rz-radial-gradient-13 .rz-stop-1 {
-  stop-color: #1C2F4F; }
+  stop-color: #293853; }
 
 .rz-line-14 {
   stroke: #6C95FF; }
@@ -430,7 +429,7 @@ main {
   stop-color: #6C95FF; }
 
 .rz-radial-gradient-14 .rz-stop-1 {
-  stop-color: #486FD4; }
+  stop-color: #6C95FF; }
 
 .rz-line-15 {
   stroke: #45CDCF; }
@@ -451,118 +450,150 @@ main {
   stop-color: #45CDCF; }
 
 .rz-radial-gradient-15 .rz-stop-1 {
-  stop-color: #29B1B3; }
-
-.rz-linear-gradient-0 .rz-stop-0 {
-  stop-color: #2976C2; }
-
-.rz-linear-gradient-0 .rz-stop-1 {
-  stop-color: #1661AB; }
-
-.rz-linear-gradient-1 .rz-stop-0 {
-  stop-color: #20A85B; }
-
-.rz-linear-gradient-1 .rz-stop-1 {
-  stop-color: #0D8F45; }
-
-.rz-linear-gradient-2 .rz-stop-0 {
-  stop-color: #FFB300; }
-
-.rz-linear-gradient-2 .rz-stop-1 {
-  stop-color: #FB9428; }
-
-.rz-linear-gradient-3 .rz-stop-0 {
-  stop-color: #FF4548; }
-
-.rz-linear-gradient-3 .rz-stop-1 {
-  stop-color: #D12426; }
-
-.rz-linear-gradient-4 .rz-stop-0 {
-  stop-color: #844CDA; }
-
-.rz-linear-gradient-4 .rz-stop-1 {
-  stop-color: #6830BF; }
-
-.rz-linear-gradient-5 .rz-stop-0 {
-  stop-color: #2C9AB7; }
-
-.rz-linear-gradient-5 .rz-stop-1 {
-  stop-color: #1A84A1; }
-
-.rz-linear-gradient-6 .rz-stop-0 {
-  stop-color: #A0E4CD; }
-
-.rz-linear-gradient-6 .rz-stop-1 {
-  stop-color: #66C4A5; }
-
-.rz-linear-gradient-7 .rz-stop-0 {
-  stop-color: #FFD66B; }
-
-.rz-linear-gradient-7 .rz-stop-1 {
-  stop-color: #E8B043; }
-
-.rz-linear-gradient-8 .rz-stop-0 {
-  stop-color: #F37F57; }
-
-.rz-linear-gradient-8 .rz-stop-1 {
-  stop-color: #D65A2F; }
-
-.rz-linear-gradient-9 .rz-stop-0 {
-  stop-color: #38545E; }
-
-.rz-linear-gradient-9 .rz-stop-1 {
-  stop-color: #243F4A; }
-
-.rz-linear-gradient-10 .rz-stop-0 {
-  stop-color: #9B4B6D; }
-
-.rz-linear-gradient-10 .rz-stop-1 {
-  stop-color: #7D3050; }
-
-.rz-linear-gradient-11 .rz-stop-0 {
-  stop-color: #FD6A92; }
-
-.rz-linear-gradient-11 .rz-stop-1 {
-  stop-color: #CC355F; }
-
-.rz-linear-gradient-12 .rz-stop-0 {
-  stop-color: #4A4069; }
-
-.rz-linear-gradient-12 .rz-stop-1 {
-  stop-color: #382E57; }
-
-.rz-linear-gradient-13 .rz-stop-0 {
-  stop-color: #293853; }
-
-.rz-linear-gradient-13 .rz-stop-1 {
-  stop-color: #1C2F4F; }
-
-.rz-linear-gradient-14 .rz-stop-0 {
-  stop-color: #6C95FF; }
-
-.rz-linear-gradient-14 .rz-stop-1 {
-  stop-color: #486FD4; }
-
-.rz-linear-gradient-15 .rz-stop-0 {
   stop-color: #45CDCF; }
 
+.rz-linear-gradient-0 .rz-stop-0 {
+  stop-color: #2976C2;
+  stop-opacity: 0.9; }
+
+.rz-linear-gradient-0 .rz-stop-1 {
+  stop-color: #2976C2;
+  stop-opacity: 0.9; }
+
+.rz-linear-gradient-1 .rz-stop-0 {
+  stop-color: #20A85B;
+  stop-opacity: 0.9; }
+
+.rz-linear-gradient-1 .rz-stop-1 {
+  stop-color: #20A85B;
+  stop-opacity: 0.9; }
+
+.rz-linear-gradient-2 .rz-stop-0 {
+  stop-color: #FFB300;
+  stop-opacity: 0.9; }
+
+.rz-linear-gradient-2 .rz-stop-1 {
+  stop-color: #FFB300;
+  stop-opacity: 0.9; }
+
+.rz-linear-gradient-3 .rz-stop-0 {
+  stop-color: #FF4548;
+  stop-opacity: 0.9; }
+
+.rz-linear-gradient-3 .rz-stop-1 {
+  stop-color: #FF4548;
+  stop-opacity: 0.9; }
+
+.rz-linear-gradient-4 .rz-stop-0 {
+  stop-color: #844CDA;
+  stop-opacity: 0.9; }
+
+.rz-linear-gradient-4 .rz-stop-1 {
+  stop-color: #844CDA;
+  stop-opacity: 0.9; }
+
+.rz-linear-gradient-5 .rz-stop-0 {
+  stop-color: #2C9AB7;
+  stop-opacity: 0.9; }
+
+.rz-linear-gradient-5 .rz-stop-1 {
+  stop-color: #2C9AB7;
+  stop-opacity: 0.9; }
+
+.rz-linear-gradient-6 .rz-stop-0 {
+  stop-color: #A0E4CD;
+  stop-opacity: 0.9; }
+
+.rz-linear-gradient-6 .rz-stop-1 {
+  stop-color: #A0E4CD;
+  stop-opacity: 0.9; }
+
+.rz-linear-gradient-7 .rz-stop-0 {
+  stop-color: #FFD66B;
+  stop-opacity: 0.9; }
+
+.rz-linear-gradient-7 .rz-stop-1 {
+  stop-color: #FFD66B;
+  stop-opacity: 0.9; }
+
+.rz-linear-gradient-8 .rz-stop-0 {
+  stop-color: #F37F57;
+  stop-opacity: 0.9; }
+
+.rz-linear-gradient-8 .rz-stop-1 {
+  stop-color: #F37F57;
+  stop-opacity: 0.9; }
+
+.rz-linear-gradient-9 .rz-stop-0 {
+  stop-color: #38545E;
+  stop-opacity: 0.9; }
+
+.rz-linear-gradient-9 .rz-stop-1 {
+  stop-color: #38545E;
+  stop-opacity: 0.9; }
+
+.rz-linear-gradient-10 .rz-stop-0 {
+  stop-color: #9B4B6D;
+  stop-opacity: 0.9; }
+
+.rz-linear-gradient-10 .rz-stop-1 {
+  stop-color: #9B4B6D;
+  stop-opacity: 0.9; }
+
+.rz-linear-gradient-11 .rz-stop-0 {
+  stop-color: #FD6A92;
+  stop-opacity: 0.9; }
+
+.rz-linear-gradient-11 .rz-stop-1 {
+  stop-color: #FD6A92;
+  stop-opacity: 0.9; }
+
+.rz-linear-gradient-12 .rz-stop-0 {
+  stop-color: #4A4069;
+  stop-opacity: 0.9; }
+
+.rz-linear-gradient-12 .rz-stop-1 {
+  stop-color: #4A4069;
+  stop-opacity: 0.9; }
+
+.rz-linear-gradient-13 .rz-stop-0 {
+  stop-color: #293853;
+  stop-opacity: 0.9; }
+
+.rz-linear-gradient-13 .rz-stop-1 {
+  stop-color: #293853;
+  stop-opacity: 0.9; }
+
+.rz-linear-gradient-14 .rz-stop-0 {
+  stop-color: #6C95FF;
+  stop-opacity: 0.9; }
+
+.rz-linear-gradient-14 .rz-stop-1 {
+  stop-color: #6C95FF;
+  stop-opacity: 0.9; }
+
+.rz-linear-gradient-15 .rz-stop-0 {
+  stop-color: #45CDCF;
+  stop-opacity: 0.9; }
+
 .rz-linear-gradient-15 .rz-stop-1 {
-  stop-color: #29B1B3; }
+  stop-color: #45CDCF;
+  stop-opacity: 0.9; }
 
 rz-grid {
   font-size: 0.81rem;
-  background-color: #fff; }
+  background-color: #22232E; }
   rz-grid .table td {
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 1px solid #E7F1F8; }
+    border-bottom: 1px solid #3C3E4F; }
   rz-grid .table thead th {
-    background-color: #E7F1F8;
+    background-color: #3C3E4F;
     font-size: 0.625rem;
     border-top: none;
     border-left: none;
-    border-right: 1px solid #fff;
+    border-right: 1px solid #22232E;
     border-bottom: none; }
 
 /*!
@@ -5133,21 +5164,21 @@ a.bg-danger:focus, a.bg-danger:hover {
     line-height: 3rem;
     padding-left: 20px; }
     .sidebar-menu li.active {
-      border-left: 4px solid #FEAA01;
+      border-left: 4px solid #2976C2;
       padding-left: 16px;
-      background: rgba(0, 0, 0, 0.07); }
+      background: #323442; }
     .sidebar-menu li:hover {
-      background: rgba(0, 0, 0, 0.07); }
+      background: #323442; }
     .sidebar-menu li a {
-      color: #fff;
+      color: rgba(255, 255, 255, 0.8);
       font-size: 0.87rem; }
 
 html, body {
   height: 100%; }
 
 body {
-  background: #F0F5F8;
-  color: #344357;
+  background: #2D2E3B;
+  color: #fff;
   font-family: "Lato"; }
 
 main {
@@ -5161,7 +5192,7 @@ header {
   height: 68px;
   line-height: 68px; }
   header .sidebar-toggler {
-    color: #344357;
+    color: #fff;
     float: left;
     text-align: center;
     width: 46px;
@@ -5251,7 +5282,7 @@ rz-pie {
 
 .rz-container {
   height: 100%;
-  background: #fff;
+  background: #22232E;
   border-radius: 3px;
   padding: 18px;
   box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.07); }

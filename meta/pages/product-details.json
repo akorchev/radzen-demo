@@ -1,0 +1,15 @@
+{
+  "components": [
+    {
+      "col": 12,
+      "dataSource": "OData",
+      "fields": [],
+      "row": 0,
+      "section": "content",
+      "type": "form"
+    }
+  ],
+  "name": "Product Details",
+  "navigation": false,
+  "startPage": false
+}

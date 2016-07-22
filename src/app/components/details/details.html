@@ -1,0 +1,15 @@
+<section class="container-fluid" id="content">
+  <div class="row">
+    <div class="col-sm-12" style="height: auto">
+      <rz-form
+        [title]="components[0].title"
+        [subtitle]="components[0].subtitle"
+        [designMode]="false"
+        [data]="oData.selection | async"
+        (save)="oDataSave($event)"
+        [fields]="components[0].fields"
+        [schema]="oData.schema">
+      </rz-form>
+    </div>
+  </div>
+</section>

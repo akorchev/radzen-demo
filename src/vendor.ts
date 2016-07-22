@@ -28,6 +28,3 @@ import '@radzen/angular';
 import '@radzen/angular';
 import '@radzen/angular';
 import '@radzen/angular';
-import '@radzen/angular';
-import '@radzen/angular';
-import '@radzen/angular';

@@ -3,10 +3,7 @@ import { Router } from '@angular/router-deprecated';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 
-import { Grid } from '@radzen/angular';
 import { Form } from '@radzen/angular';
-import { Pie } from '@radzen/angular';
-import { Chart } from '@radzen/angular';
 import { ODataService } from '../../services/o-data';
 import { ODATA_SELECT } from '../../reducers/o-data';
 import { ODataModel } from '../../models/o-data';
@@ -15,16 +12,16 @@ import { ODataState } from '../../state';
 import { State } from '../../state';
 
 export const DIRECTIVES = [
-  Grid, Form, Pie, Chart
+  Form
 ];
 
 export const PROVIDERS = [
   ODataService
 ];
 
-const { components } = require('../../../../meta/pages/home.json');
+const { components } = require('../../../../meta/pages/details.json');
 
-export class HomeMeta {
+export class DetailsMeta {
   components = components;
 
   store: Store<State>;
