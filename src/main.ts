@@ -1,9 +1,10 @@
-import {provide} from '@angular/core';
-import {bootstrap} from '@angular/platform-browser-dynamic';
-import {FORM_PROVIDERS, LocationStrategy, HashLocationStrategy} from '@angular/common';
-import {ROUTER_PROVIDERS} from '@angular/router-deprecated';
-import {HTTP_PROVIDERS} from '@angular/http';
-import {provideStore} from '@ngrx/store';
+import { provide } from '@angular/core';
+import { bootstrap } from '@angular/platform-browser-dynamic';
+import { disableDeprecatedForms, provideForms } from '@angular/forms';
+import { provideRouter, RouterConfig, ROUTER_DIRECTIVES } from '@angular/router';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { HTTP_PROVIDERS } from '@angular/http';
+import { provideStore } from '@ngrx/store';
 
 import { oData } from './app/reducers/o-data';
 import './assets/css/styles.css';
@@ -19,9 +20,10 @@ import {AppComponent, appRouterProviders} from './app/components/app/app';
  */
 document.addEventListener('DOMContentLoaded', function main() {
   bootstrap(AppComponent, [
-    ...FORM_PROVIDERS,
     ...HTTP_PROVIDERS,
     appRouterProviders,
+    disableDeprecatedForms(),
+    provideForms(),
     provideStore({
       oData,
     }),

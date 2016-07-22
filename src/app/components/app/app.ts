@@ -1,8 +1,8 @@
-import {Component} from '@angular/core';
-import {provideRouter, RouterConfig, ROUTER_DIRECTIVES} from '@angular/router';
-import {HomeComponent} from '../home/home';
-import {TwoComponent} from '../two/two';
-import {ProductDetailsComponent} from '../product-details/product-details';
+import { Component } from '@angular/core';
+import { provideRouter, RouterConfig, ROUTER_DIRECTIVES } from '@angular/router';
+import { HomeComponent } from '../home/home';
+import { TwoComponent } from '../two/two';
+import { ProductDetailsComponent } from '../product-details/product-details';
 
 
 const routes: RouterConfig = [
