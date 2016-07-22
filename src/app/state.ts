@@ -1,10 +1,10 @@
-import { ODataModel } from './models/o-data';
+import { ProductsModel } from './models/products';
 
-export interface ODataState {
-  items: ODataModel[];
-  selection: ODataModel;
+export interface ProductsState {
+  items: ProductsModel[];
+  selection: ProductsModel;
 }
 
 export interface State {
-  oData: ODataState;
+  products: ProductsState;
 }

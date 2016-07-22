@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 
-import { Form } from '@radzen/angular';
+import { Grid } from '@radzen/angular';
 import { ProductsService } from '../../services/products';
 import { PRODUCTS_SELECT } from '../../reducers/products';
 import { ProductsModel } from '../../models/products';
@@ -12,16 +12,16 @@ import { ProductsState } from '../../state';
 import { State } from '../../state';
 
 export const DIRECTIVES = [
-  Form
+  Grid
 ];
 
 export const PROVIDERS = [
   ProductsService
 ];
 
-const { components } = require('../../../../meta/pages/product-details.json');
+const { components } = require('../../../../meta/pages/product-list.json');
 
-export class ProductDetailsMeta {
+export class ProductListMeta {
   components = components;
 
   store: Store<State>;

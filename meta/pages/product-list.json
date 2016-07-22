@@ -1,0 +1,47 @@
+{
+  "components": [
+    {
+      "col": 12,
+      "columns": [
+        {
+          "property": "Name",
+          "title": "Name"
+        },
+        {
+          "property": "Description",
+          "title": "Description"
+        },
+        {
+          "property": "DiscontinuedDate",
+          "title": "Discontinued Date"
+        },
+        {
+          "property": "Price",
+          "title": "Price"
+        },
+        {
+          "property": "Rating",
+          "title": "Rating"
+        },
+        {
+          "property": "ReleaseDate",
+          "title": "Release Date"
+        }
+      ],
+      "dataSource": "Products",
+      "height": 725,
+      "row": 0,
+      "section": "content",
+      "select": {
+        "action": "Navigate",
+        "argument": "product-details"
+      },
+      "subtitle": "list",
+      "title": "Product",
+      "type": "grid"
+    }
+  ],
+  "name": "Product List",
+  "navigation": true,
+  "startPage": false
+}

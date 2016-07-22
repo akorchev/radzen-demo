@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 import { provideRouter, RouterConfig, ROUTER_DIRECTIVES } from '@angular/router';
-import { HomeComponent } from '../home/home';
-import { TwoComponent } from '../two/two';
+import { ProductListComponent } from '../product-list/product-list';
+import { ProductStatsComponent } from '../product-stats/product-stats';
 import { ProductDetailsComponent } from '../product-details/product-details';
 
 
 const routes: RouterConfig = [
-    { path: 'home', component: HomeComponent },
-  { path: 'two', component: TwoComponent },
+    { path: 'product-list', component: ProductListComponent },
+  { path: 'product-stats', component: ProductStatsComponent },
   { path: 'product-details', component: ProductDetailsComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' }
+  { path: '', redirectTo: '/product-list', pathMatch: 'full' }
 ];
 
 export const appRouterProviders = [
@@ -23,8 +23,8 @@ export const appRouterProviders = [
       ROUTER_DIRECTIVES
     ],
     precompile: [
-     HomeComponent,
-     TwoComponent,
+     ProductListComponent,
+     ProductStatsComponent,
      ProductDetailsComponent,
     ]
 })

@@ -595,6 +595,9 @@ rz-grid {
     border-left: none;
     border-right: 1px solid #22232E;
     border-bottom: none; }
+  rz-grid .table tr:hover td {
+    color: #344357;
+    cursor: pointer; }
 
 /*!
  * Bootstrap v4.0.0-alpha.2 (http://getbootstrap.com)
@@ -5282,6 +5285,7 @@ rz-pie {
 
 .rz-container {
   height: 100%;
+  overflow: auto;
   background: #22232E;
   border-radius: 3px;
   padding: 18px;

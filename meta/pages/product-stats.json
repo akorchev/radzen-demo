@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "category": "Name",
+      "chartType": "Pie",
+      "col": 12,
+      "dataSource": "Products",
+      "labels": {
+        "connectors": true,
+        "offset": 20
+      },
+      "legend": true,
+      "radius": 0.8,
+      "row": 0,
+      "section": "content",
+      "subtitle": "",
+      "title": "Product Rating",
+      "type": "pie",
+      "value": "Rating"
+    },
+    {
+      "aggregate": "Sum",
+      "category": "Name",
+      "categoryAxis": {},
+      "chartType": "Column",
+      "col": 12,
+      "dataSource": "Products",
+      "legend": true,
+      "limit": {},
+      "row": 1,
+      "section": "content",
+      "subtitle": "in US dollars",
+      "title": "Product Price",
+      "type": "chart",
+      "value": "Price",
+      "valueAxis": {
+        "format": "$s"
+      }
+    }
+  ],
+  "name": "Product Stats",
+  "navigation": true,
+  "startPage": true
+}

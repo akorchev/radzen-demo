@@ -1,5 +1,5 @@
 {
-  "name": "OData",
+  "name": "Products",
   "type": "odata",
   "properties": {
     "ID": {
@@ -20,7 +20,9 @@
     "Rating": {
       "type": "integer"
     },
-    "Price": {}
+    "Price": {
+      "type": "number"
+    }
   },
   "links": [
     {

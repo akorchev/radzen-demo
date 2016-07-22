@@ -1,21 +1,21 @@
 {
   "dataSources": [
-    "OData"
+    "Products"
   ],
   "https": false,
   "logo": "assets/img/logo.png",
   "name": "Radzen Demo",
   "navigation": [
-    "Two",
-    "Home"
+    "Product List",
+    "Product Stats"
   ],
   "pages": [
-    "Home",
-    "Two",
+    "Product List",
+    "Product Stats",
     "Product Details"
   ],
   "port": 8000,
-  "startPage": "Home",
+  "startPage": "Product List",
   "target": "angular2",
   "theme": "Dusk"
 }

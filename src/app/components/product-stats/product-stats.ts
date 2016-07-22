@@ -1,9 +1,9 @@
 import {Component, Injector} from '@angular/core';
-import {DIRECTIVES, PROVIDERS, DetailsMeta} from './details.generated';
+import {DIRECTIVES, PROVIDERS, ProductStatsMeta} from './product-stats.generated';
 
 @Component({
-    selector: 'details',
-    template: require('./details.html'),
+    selector: 'product-stats',
+    template: require('./product-stats.html'),
     providers: PROVIDERS.concat([
       // CUSTOM PROVIDERS
     ]),
@@ -11,7 +11,7 @@ import {DIRECTIVES, PROVIDERS, DetailsMeta} from './details.generated';
       // CUSTOM DIRECTIVES
     ])
 })
-export class DetailsComponent extends DetailsMeta {
+export class ProductStatsComponent extends ProductStatsMeta {
   constructor(injector: Injector) {
     super(injector);
   }

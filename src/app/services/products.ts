@@ -3,24 +3,24 @@ import { Http, Headers } from '@angular/http';
 import { Store } from '@ngrx/store';
 
 import { State } from '../state';
-import { ODATA_READ } from '../reducers/o-data';
+import { PRODUCTS_READ } from '../reducers/products';
 
 @Injectable()
-export class ODataService {
+export class ProductsService {
   get url() {
-    var url = sessionStorage['OData'];
+    var url = sessionStorage['Products'];
 
     if (!url) {
       url = 'http://odata-service.apphb.com/Products';
 
-      sessionStorage['OData'] = url;
+      sessionStorage['Products'] = url;
     }
 
     return url;
   }
 
   set url(value) {
-    sessionStorage['OData'] = value;
+    sessionStorage['Products'] = value;
   }
 
   schema = {
@@ -42,7 +42,9 @@ export class ODataService {
     Rating: {
       type: "integer"
     },
-    Price: {}
+    Price: {
+      type: "number"
+    }
   };
 
   constructor(private http: Http, store: Store<State>) {
@@ -60,7 +62,7 @@ export class ODataService {
       })
       .subscribe(data => {
         store.dispatch({
-          type: ODATA_READ,
+          type: PRODUCTS_READ,
           payload: data.value
         })
       });

@@ -1,9 +1,9 @@
 import {Component, Injector} from '@angular/core';
-import {DIRECTIVES, PROVIDERS, HomeMeta} from './home.generated';
+import {DIRECTIVES, PROVIDERS, ProductListMeta} from './product-list.generated';
 
 @Component({
-    selector: 'home',
-    template: require('./home.html'),
+    selector: 'product-list',
+    template: require('./product-list.html'),
     providers: PROVIDERS.concat([
       // CUSTOM PROVIDERS
     ]),
@@ -11,7 +11,7 @@ import {DIRECTIVES, PROVIDERS, HomeMeta} from './home.generated';
       // CUSTOM DIRECTIVES
     ])
 })
-export class HomeComponent extends HomeMeta {
+export class ProductListComponent extends ProductListMeta {
   constructor(injector: Injector) {
     super(injector);
   }

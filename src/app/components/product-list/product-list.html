@@ -1,0 +1,14 @@
+<section class="container-fluid" id="content">
+  <div class="row">
+    <div class="col-sm-12" style="height: 725px">
+      <rz-grid
+        [title]="components[0].title"
+        [subtitle]="components[0].subtitle"
+        [data]="products.items | async"
+        [selection]="products.selection | async"
+        (select)="productsSelect($event, components[0].select.argument)"
+        [columns]='components[0].columns'>
+      </rz-grid>
+    </div>
+  </div>
+</section>

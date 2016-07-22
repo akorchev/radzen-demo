@@ -110,6 +110,7 @@ rz-pie {
 
 .rz-container {
   height: 100%;
+  overflow: auto;
   background: $container-background-color;
   border-radius: $container-border-radius;
   padding: $container-padding;

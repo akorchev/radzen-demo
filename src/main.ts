@@ -6,7 +6,7 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { HTTP_PROVIDERS } from '@angular/http';
 import { provideStore } from '@ngrx/store';
 
-import { oData } from './app/reducers/o-data';
+import { products } from './app/reducers/products';
 import './assets/css/styles.css';
 
 /*
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function main() {
     disableDeprecatedForms(),
     provideForms(),
     provideStore({
-      oData,
+      products,
     }),
     provide(LocationStrategy, { useClass: HashLocationStrategy })
   ])
