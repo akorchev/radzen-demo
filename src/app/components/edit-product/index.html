@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-sm-12">
+    <rz-form
+      [data]="product.selection | async"
+      (save)="productSave($event)"
+      [fields]="components[0].fields"
+    >
+    </rz-form>
+  </div>
+</div>

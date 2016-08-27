@@ -1,21 +1,19 @@
 {
   "dataSources": [
-    "Products"
+    "Sample"
   ],
+  "generator": "@radzen/angular-generator",
   "https": false,
   "logo": "assets/img/logo.png",
   "name": "Radzen Demo",
   "navigation": [
-    "Product List",
-    "Product Stats"
+    "Product List"
   ],
   "pages": [
     "Product List",
-    "Product Stats",
-    "Product Details"
+    "Edit Product"
   ],
   "port": 8000,
   "startPage": "Product List",
-  "target": "angular2",
   "theme": "Dusk"
 }

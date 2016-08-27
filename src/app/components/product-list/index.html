@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-sm-12">
+    <rz-grid
+      [data]="product.items | async"
+      [columns]="components[0].columns"
+      (select)="productNavigate('edit-product', $event)"
+      [subtitle]="components[0].subtitle"
+      [title]="components[0].title"
+    >
+    </rz-grid>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+{
+  "components": [
+    {
+      "col": 12,
+      "dataSource": "ODataService.Models.Product",
+      "fields": [],
+      "row": 0,
+      "section": null,
+      "type": "form"
+    }
+  ],
+  "context": "ODataService.Models.Product",
+  "name": "Edit Product"
+}

@@ -4,16 +4,16 @@
       "col": 12,
       "columns": [
         {
+          "property": "ID",
+          "title": "ID"
+        },
+        {
           "property": "Name",
           "title": "Name"
         },
         {
           "property": "Description",
           "title": "Description"
-        },
-        {
-          "property": "DiscontinuedDate",
-          "title": "Discontinued Date"
         },
         {
           "property": "Price",
@@ -25,23 +25,20 @@
         },
         {
           "property": "ReleaseDate",
-          "title": "Release Date"
+          "title": "ReleaseDate"
         }
       ],
-      "dataSource": "Products",
-      "height": 725,
+      "dataSource": "ODataService.Models.Product",
       "row": 0,
-      "section": "content",
+      "section": null,
       "select": {
         "action": "Navigate",
-        "argument": "product-details"
+        "argument": "edit-product"
       },
       "subtitle": "list",
       "title": "Product",
       "type": "grid"
     }
   ],
-  "name": "Product List",
-  "navigation": true,
-  "startPage": false
+  "name": "Product List"
 }

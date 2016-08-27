@@ -1,10 +1,14 @@
-import { ProductsModel } from './models/products';
-
-export interface ProductsState {
-  items: ProductsModel[];
-  selection: ProductsModel;
-}
+import * as SampleModels from './models/sample';
 
 export interface State {
-  products: ProductsState;
+  sample: {
+    error: {
+      items: Array<SampleModels.Error>,
+      selection: SampleModels.Error
+    },
+    product: {
+      items: Array<SampleModels.Product>,
+      selection: SampleModels.Product
+    }
+  }
 }

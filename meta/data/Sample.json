@@ -1,0 +1,186 @@
+{
+  "basePath": "/",
+  "definitions": {
+    "Error": {
+      "properties": {
+        "error": {
+          "properties": {
+            "code": {
+              "type": "string"
+            },
+            "message": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "ODataService.Models.Product": {
+      "properties": {
+        "Description": {
+          "type": "string"
+        },
+        "DiscontinuedDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "ID": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "Name": {
+          "type": "string"
+        },
+        "Price": {
+          "type": "string"
+        },
+        "Rating": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "ReleaseDate": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "host": "radzen-data.apphb.com",
+  "info": {
+    "title": "Sample",
+    "version": "0.0.1"
+  },
+  "paths": {
+    "/Products": {
+      "get": {
+        "operationId": "getProducts",
+        "responses": {
+          "200": {
+            "description": "List of Product",
+            "schema": {
+              "properties": {
+                "value": {
+                  "items": {
+                    "$ref": "#/definitions/ODataService.Models.Product"
+                  },
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "createProduct",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "Product",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ODataService.Models.Product"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Empty response."
+          },
+          "default": null
+        }
+      }
+    },
+    "/Products({ID})": {
+      "delete": {
+        "operationId": "deleteProduct",
+        "parameters": [
+          {
+            "format": "int32",
+            "in": "path",
+            "name": "ID",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Empty response."
+          },
+          "default": null
+        }
+      },
+      "get": {
+        "operationId": "getProductById",
+        "parameters": [
+          {
+            "format": "int32",
+            "in": "path",
+            "name": "ID",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A Product.",
+            "schema": {
+              "$ref": "#/definitions/ODataService.Models.Product"
+            }
+          },
+          "default": null
+        }
+      },
+      "patch": {
+        "operationId": "updateProduct",
+        "parameters": [
+          {
+            "format": "int32",
+            "in": "path",
+            "name": "ID",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "in": "body",
+            "name": "Product",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ODataService.Models.Product"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Empty response."
+          },
+          "default": null
+        }
+      }
+    }
+  },
+  "produces": [
+    "application/json"
+  ],
+  "security": {
+    "Sample": []
+  },
+  "securityDefinitions": {
+    "Sample": {
+      "authorizationUrl": "https://radzen.auth0.com/authorize?client_id=YxejI6yr9SVg8tuQ54ZcDNUdmQYJPijQ",
+      "flow": "implicit",
+      "scopes": {},
+      "type": "oauth2"
+    }
+  },
+  "swagger": "2.0"
+}

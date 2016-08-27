@@ -22,8 +22,8 @@ module.exports = {
   debug: true,
 
   entry: {
-    'vendor': './src/vendor.ts',
-    'main': './src/main.ts'
+    'vendor': './src/app/vendor.ts',
+    'main': './src/app/main.ts'
   },
 
   // Config for our build files
@@ -82,7 +82,7 @@ module.exports = {
     // static assets
     new CopyWebpackPlugin([ { from: path.join(__dirname, 'src', 'assets', 'img', path.basename('assets/img/logo.png')), to: 'assets/img/logo.png' } ]),
     // generating html
-    new HtmlWebpackPlugin({ template: 'src/index.html' }),
+    new HtmlWebpackPlugin({ template: 'src/app/index.html' }),
     // replace
     new DefinePlugin({
       'process.env': {

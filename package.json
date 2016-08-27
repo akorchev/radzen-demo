@@ -1,22 +1,22 @@
 {
   "name": "radzen-demo",
   "dependencies": {
-    "@angular/common": "2.0.0-rc.4",
-    "@angular/compiler": "2.0.0-rc.4",
-    "@angular/core": "2.0.0-rc.4",
-    "@angular/forms": "0.2.0",
-    "@angular/http": "2.0.0-rc.4",
-    "@angular/platform-browser": "2.0.0-rc.4",
-    "@angular/platform-browser-dynamic": "2.0.0-rc.4",
-    "@angular/router": "3.0.0-beta.1",
+    "@angular/common": "2.0.0-rc.5",
+    "@angular/compiler": "2.0.0-rc.5",
+    "@angular/core": "2.0.0-rc.5",
+    "@angular/forms": "0.3.0",
+    "@angular/http": "2.0.0-rc.5",
+    "@angular/platform-browser": "2.0.0-rc.5",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.5",
+    "@angular/router": "3.0.0-rc.1",
     "@ngrx/core": "^1.0.0",
     "@ngrx/store": "^2.0.0",
     "@radzen/angular": "latest",
-    "es6-promise": "^3.1.2",
-    "es6-shim": "^0.33.3",
-    "es7-reflect-metadata": "^1.6.0",
+    "es6-promise": "3.1.2",
+    "es6-shim": "0.33.3",
+    "es7-reflect-metadata": "1.6.0",
     "rxjs": "5.0.0-beta.6",
-    "zone.js": "~0.6.12"
+    "zone.js": "0.6.12"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^0.3.3",
@@ -40,11 +40,11 @@
   },
   "scripts": {
     "clean:dist": "./node_modules/.bin/rimraf dist",
-    "server:dev": "webpack-dev-server --cert server.cer --key server.key --config webpack.config.development.js",
-    "server:prod": "http-server dist --cors",
-    "build:dev": "webpack --config webpack.config.development.js --progress --profile --colors --display-error-details --display-cached",
-    "prebuild:prod": "npm run clean:dist",
-    "build:prod": "webpack --config webpack.config.production.js --progress --profile --colors --display-error-details --display-cached",
-    "start": "npm run server:dev"
+    "server:development": "webpack-dev-server --cert server.cer --key server.key --config webpack.config.development.js",
+    "server:production": "http-server dist --cors",
+    "build:development": "webpack --config webpack.config.development.js --progress --profile --colors --display-error-details --display-cached",
+    "prebuild:production": "npm run clean:dist",
+    "build:production": "webpack --config webpack.config.production.js --progress --profile --colors --display-error-details --display-cached",
+    "start": "npm run server:development"
   }
 }
