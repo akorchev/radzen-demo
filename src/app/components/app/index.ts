@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterConfig, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 import { ProductListComponent } from '../product-list';
 import { EditProductComponent } from '../edit-product';
@@ -13,7 +13,7 @@ export class PageTitleComponent {
   }
 }
 
-export const routes: RouterConfig = [
+export const routes = [
   {
     path: 'product-list',
     children: [

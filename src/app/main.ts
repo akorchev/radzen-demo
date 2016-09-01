@@ -23,9 +23,10 @@ import { AppComponent, PageTitleComponent, routes } from './components/app';
   imports: [
     BrowserModule,
     StoreModule.provideStore({
-  sample
+      sample
     }),
-    RouterModule.forRoot(routes),
+    // Because of https://github.com/angular/angular/issues/11233
+    RouterModule.forRoot(routes, { useHash: false }),
     FormsModule,
     CommonModule,
     HttpModule,
